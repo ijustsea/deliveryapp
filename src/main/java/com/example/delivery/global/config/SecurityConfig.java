@@ -99,7 +99,7 @@ public class SecurityConfig {
 
                         // 메뉴 수정
                         .requestMatchers(
-                                HttpMethod.PATCH,
+                                HttpMethod.PUT,
                                 "/api/menus/*"
                         ).hasRole("OWNER")
 
