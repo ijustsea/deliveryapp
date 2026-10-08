@@ -33,7 +33,7 @@ public class UserDetailsImpl implements UserDetails {
     //사용자의 권한 확인 메소드
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
-        return List.of(new SimpleGrantedAuthority(user.getRole().name()));
+        return List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));
     }
 
 }

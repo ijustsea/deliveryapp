@@ -26,18 +26,14 @@ public class User extends BaseEntity {
     @Column(name = "password", nullable = false, length = 60)
     private String password;
 
-    @Column(name = "address", nullable = false, length = 255)
-    private String address;
-
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false, length = 20)
     private UserRole role;
 
-    public User(String userName, String loginId, String password, String address, UserRole role){
+    public User(String userName, String loginId, String password, UserRole role){
         this.userName = userName;
         this.loginId = loginId;
         this.password = password;
-        this.address = address;
         this.role = role;
     }
 
